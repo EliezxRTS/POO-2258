@@ -21,6 +21,16 @@ public class Window extends JFrame{
         this.getContentPane().add(txtName);
         button = new JButton("Agregar");
         this.getContentPane().add(button);
+
+        modelo = new ModelName();
+        modelo.addNames("Aurora");
+        modelo.addNames("Eliezer");
+        modelo.addNames("Kohaku");
+        comboBoxModel= new JComboBox(modelo);
+        this.getContentPane().add(comboBoxModel);
+        this.setVisible(true);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+
         button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -38,14 +48,5 @@ public class Window extends JFrame{
                 JOptionPane.showMessageDialog(null,"Hola " + comboBoxModel.getSelectedItem());
             }
         });
-
-        modelo = new ModelName();
-        modelo.addNames("Aurora");
-        modelo.addNames("Eliezer");
-        modelo.addNames("Kohaku");
-        comboBoxModel= new JComboBox();
-        this.getContentPane().add(comboBoxModel);
-        this.setVisible(true);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }
