@@ -1,4 +1,4 @@
-package org.example.persistance;
+package org.example.Persistencia;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
