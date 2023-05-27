@@ -5,6 +5,8 @@ import org.example.Model.ModeloTablaLibro;
 import org.example.Vista.VentanaLibro;
 
 import javax.swing.*;
+import javax.swing.table.TableColumn;
+import javax.swing.table.TableColumnModel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -40,6 +42,9 @@ public class ControladorLibro extends MouseAdapter {
                 JOptionPane.showMessageDialog(ventanaLibro,"No se pudo agregar a la base de datos. Por favor revise su conexion","Error al insertar",JOptionPane.INFORMATION_MESSAGE);
             }
         }
+        TableColumnModel columnModel = this.ventanaLibro.getTblLibro().getColumnModel();
+        TableColumn primeraColumna = columnModel.getColumn(0);
+        primeraColumna.setPreferredWidth(0);
         this.ventanaLibro.limpiar();
     }
 }

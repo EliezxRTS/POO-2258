@@ -22,6 +22,7 @@ public class ModeloTablaLibro implements TableModel {
         libroDAO = new LibroDAO();
     }
 
+
     @Override
     public int getRowCount() {
         return datos.size();
