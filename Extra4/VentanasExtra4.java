@@ -76,6 +76,7 @@ public class VentanasExtra4 extends JFrame {
         panel04.setBackground(new Color(96, 135, 130));
         this.getContentPane().add(panel04,3);
 
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
     }
 }
